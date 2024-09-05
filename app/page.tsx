@@ -5,7 +5,7 @@ import Header from './image/header.png';
 import { useEffect, useMemo, useState } from 'react';
 import MotionText from '@/app/_component/MotionText';
 import Image from 'next/image';
-import cx from 'classnames';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const MOTION_LAYOUT = 'layout';
 
@@ -34,29 +34,51 @@ export default function Home() {
     }, 1700);
   }, [timer]);
 
-  console.log(timer);
-
   return (
     <section className={styles.section}>
-      <article className={cx(styles.centerArticle, hasContent && styles.end)}>
-        <div className={styles.centerTextGroup}>
-          {centerText.map(
-            (text, index) =>
-              timer === index && (
-                <MotionText key={index} text={text} layoutId={MOTION_LAYOUT} />
-              ),
-          )}
-        </div>
-      </article>
+      <AnimatePresence>
+        {!hasContent && (
+          <motion.article
+            className={styles.centerArticle}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <div className={styles.centerTextGroup}>
+              {centerText.map(
+                (text, index) =>
+                  timer === index && (
+                    <MotionText
+                      key={index}
+                      text={text}
+                      layoutId={MOTION_LAYOUT}
+                    />
+                  ),
+              )}
+            </div>
+          </motion.article>
+        )}
+      </AnimatePresence>
       {hasContent && (
-        <header className={styles.header}>
-          <Image src={Header} alt='header' className={styles.headerImage} />
-          <div>
-            <h3 className={styles.headerTitle}>
-              당신의 여행을 <strong>응원</strong>합니다.
-            </h3>
-          </div>
-        </header>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.9, delay: 0.9 }}
+        >
+          <header className={styles.header}>
+            <Image src={Header} alt='header' className={styles.headerImage} />
+            <div>
+              <h3 className={styles.headerTitle}>
+                당신의 여행을 <strong>응원</strong>합니다.
+              </h3>
+              <h3 className={styles.headerTitle}>
+                꼭 <strong>살아서</strong> 돌아오세요.
+              </h3>
+            </div>
+          </header>
+        </motion.div>
       )}
     </section>
   );
