@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  gap: 20px;
+}
+
+.itemImage {
+  min-width: 200px;
+  max-width: 200px;
+  height: 150px;
+}
+
+.itemText {
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+}
