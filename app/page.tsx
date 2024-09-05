@@ -64,43 +64,43 @@ export default function Home() {
       },
       {
         image: Give5,
-        text: '쿠키',
-      },
-      {
-        image: Give6,
         text: '헤어 에센스',
       },
       {
-        image: Give7,
+        image: Give6,
         text: '마이쮸같은 사탕',
       },
       {
-        image: Give8,
+        image: Give7,
         text: '커피3',
       },
       {
-        image: Give9,
+        image: Give8,
         text: '라면',
       },
       {
+        image: Give9,
+        text: '노니 건강식품',
+      },
+      {
         image: Give10,
-        text: '노니 영양제',
+        text: '사탕',
       },
       {
         image: Give11,
-        text: '캔디',
-      },
-      {
-        image: Give12,
         text: '자외선 진정 피부 바디크림',
       },
       {
+        image: Give12,
+        text: '과자',
+      },
+      {
         image: Give13,
-        text: '쿠키2',
+        text: '호랑이연고',
       },
       {
         image: Give14,
-        text: '호랑이연고',
+        text: '그래놀라',
       },
     ],
     [],
