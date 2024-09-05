@@ -52,7 +52,7 @@ export default function Home() {
       },
       {
         image: Give2,
-        text: '바디크림',
+        text: '바디크림 body butter',
       },
       {
         image: Give3,
@@ -64,11 +64,11 @@ export default function Home() {
       },
       {
         image: Give5,
-        text: '헤어 에센스',
+        text: '헤어 에센스 ellips',
       },
       {
         image: Give6,
-        text: '마이쮸같은 사탕',
+        text: '마이쮸같은 사탕 kinocandy',
       },
       {
         image: Give7,
@@ -76,7 +76,7 @@ export default function Home() {
       },
       {
         image: Give8,
-        text: '라면',
+        text: '라면 mogoreng',
       },
       {
         image: Give9,
@@ -88,7 +88,7 @@ export default function Home() {
       },
       {
         image: Give11,
-        text: '자외선 진정 피부 바디크림',
+        text: '자외선 진정 피부 바디크림 sensatia',
       },
       {
         image: Give12,
@@ -100,7 +100,7 @@ export default function Home() {
       },
       {
         image: Give14,
-        text: '그래놀라',
+        text: '그래놀라 yava',
       },
     ],
     [],
