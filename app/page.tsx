@@ -15,6 +15,7 @@ import Give12 from './image/snack1.png';
 import Give13 from './image/tiger.jpg';
 import Give14 from './image/yava.jpg';
 import styles from './page.module.css';
+import Psychopath from './image/psychopath.png';
 import Header from './image/header.png';
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
@@ -32,7 +33,7 @@ export default function Home() {
   const centerText = useMemo(
     () => [
       '안녕하세요.',
-      '용호씨?',
+      '싸이코패스 용호씨?',
       '여행 축하드리고',
       '중요한거',
       '잊어버릴까봐',
@@ -46,6 +47,10 @@ export default function Home() {
   );
   const giveData = useMemo(
     () => [
+      {
+        image: Psychopath,
+        text: "싸패용호"
+      },
       {
         image: Give1,
         text: '말린 바나나 얇게 슬라이스',
