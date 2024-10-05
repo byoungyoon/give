@@ -174,6 +174,7 @@ export default function Home() {
             className={styles.body}
           >
             <Image src={Date} alt='date' className={styles.date} />
+            <Image src={Psychopath} alt='date' className={styles.date} />
             <FaAngleDoubleDown className={styles.arrow} size={25} />
             <div className={styles.giveList}>
               {giveData.map((datum, index) => (
